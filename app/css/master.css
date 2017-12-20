@@ -14,3 +14,18 @@ nav a{
   font-size: 1.2em;
   padding-left: 25px;
 }
+
+.list {
+  display: flex;
+  align-content: space-around;
+}
+
+.list div {
+  padding: 5px;
+  background: #eee;
+}
+
+div.selected {
+  background: #444;
+  color: white;
+}

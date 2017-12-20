@@ -1,0 +1,22 @@
+<h1>Our Starships</h1>
+<div class="list">
+    <div ng-class="{selected: page==1}" ng-click="getPage(1)">1</div>
+    <div ng-class="{selected: page==2}" ng-click="getPage(2)">2</div>
+    <div ng-class="{selected: page==3}" ng-click="getPage(3)">3</div>
+    <div ng-class="{selected: page==4}" ng-click="getPage(4)">4</div>
+</div>
+<div class="list">
+    <div ng-repeat="myPage in [1,2,3,4]"
+         ng-class="{selected: myPage == page}"
+         ng-click="getPage(myPage)">
+    {{myPage}}
+    </div>
+</div>
+<div ng-repeat="ship in ships">
+    <a ui-sref='ship(ship)'><h3>{{ ship.name }}</h3></a>
+    <div>
+        {{ ship.model }}
+        {{ ship.cost_in_credits | currency }}
+    </div>
+    <!-- {{ ship }} -->
+</div>

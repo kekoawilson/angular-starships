@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="starships">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="app/css/master.css">
+  <title>Angular Starships</title>
+</head>
+<body >
+
+  <a ui-sref="home">Home</a>
+  <a ui-sref="ships">Browse Ships</a>
+  <a ui-sref="ship({id:9})">Death Star</a>
+  
+  <ui-view></ui-view>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js" charset="utf-8"></script>
+  <script src="app/app.js"></script>
+
+  <script src="app/views/ships/shipsCtrl.js"></script>
+  <script src="app/views/ship/shipCtrl.js"></script>
+  
+  <script src="app/services/shipSrvc.js"></script>
+</body>
+</html>
